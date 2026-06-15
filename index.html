@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bản Đề Xuất Hợp Tác - Nhật Tiến Steel | Đất Cảng Agency</title>
+    <style>
+        :root {
+            --primary-navy: #0F2027;
+            --secondary-navy: #203A43;
+            --accent-orange: #F2994A;
+            --text-light: #F8F9FA;
+            --text-dark: #333333;
+            --bg-light: #F4F7F6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            display: flex;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: linear-gradient(to bottom, var(--primary-navy), var(--secondary-navy));
+            color: var(--text-light);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        .sidebar-header {
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 22px;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .sidebar-header p {
+            margin: 5px 0 0;
+            font-size: 13px;
+            color: #ccc;
+        }
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-menu li {
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .sidebar-menu a {
+            display: block;
+            padding: 12px 20px;
+            font-size: 14.5px;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            background-color: var(--accent-orange);
+            color: var(--primary-navy);
+            font-weight: bold;
+            padding-left: 25px;
+        }
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            padding: 40px;
+            width: calc(100% - 260px);
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+        .section-container {
+            display: none; /* Hide all sections by default */
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        .section-container.active {
+            display: block; /* Show only active section */
+            animation: fadeInTab 0.5s ease-out forwards;
+        }
+        @keyframes fadeInTab {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1.section-title {
+            color: var(--primary-navy);
+            border-bottom: 3px solid var(--accent-orange);
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .card {
+            background: var(--bg-light);
+            padding: 25px;
+            border-top: 4px solid var(--accent-orange);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--secondary-navy);
+            font-size: 18px;
+        }
+        /* Images */
+        .img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .img-container {
+            text-align: center;
+        }
+        .img-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .img-container img:hover {
+            transform: scale(1.03);
+        }
+        .img-container p {
+            font-weight: bold;
+            color: var(--secondary-navy);
+            margin-top: 15px;
+        }
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #eee;
+            text-align: left;
+            line-height: 1.6;
+        }
+        th {
+            background-color: var(--secondary-navy);
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .highlight {
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+        /* Intro Section */
+        .intro-wrapper {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .intro-title {
+            color: var(--primary-navy);
+            font-size: 40px;
+            text-transform: uppercase;
+            border-bottom: 5px solid var(--accent-orange);
+            display: inline-block;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        .intro-agency {
+            color: var(--secondary-navy);
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .intro-pic {
+            font-size: 20px;
+            color: #555;
+            background: var(--bg-light);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            border: 1px solid #ddd;
+        }
+        /* Lightbox Slider */
+        .lightbox-overlay {
+            display: none; position: fixed; z-index: 9999;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;
+        }
+        .lightbox-overlay.active { display: flex; }
+        .lightbox-img {
+            max-width: 90%; max-height: 90vh; border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8); user-select: none; transition: transform 0.3s;
+        }
+        .lightbox-nav {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            font-size: 40px; color: white; cursor: pointer;
+            background: rgba(255,255,255,0.1); border-radius: 50%;
+            width: 60px; height: 60px; display: flex;
+            justify-content: center; align-items: center;
+            transition: 0.3s; user-select: none;
+        }
+        .lightbox-nav:hover { background: var(--accent-orange); color: var(--primary-navy); }
+        .lightbox-prev { left: 30px; }
+        .lightbox-next { right: 30px; }
+        .lightbox-close {
+            position: absolute; top: 20px; right: 30px;
+            font-size: 40px; color: white; cursor: pointer; transition: 0.3s; user-select: none;
+        }
+        .lightbox-close:hover { color: var(--accent-orange); }
+        .lightbox-caption {
+            position: absolute; bottom: 30px; color: white; font-size: 18px;
+            background: rgba(0,0,0,0.6); padding: 10px 20px; border-radius: 30px;
+        }
+        .slide-trigger { cursor: pointer; }
+
+        /* Tree Diagram */
+        .tree {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+            overflow-x: auto;
+        }
+        .tree ul {
+            padding-top: 20px; position: relative;
+            display: flex; justify-content: center;
+            margin: 0; padding-left: 0;
+        }
+        .tree li {
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+        }
+        .tree li::before, .tree li::after{
+            content: '';
+            position: absolute; top: 0; right: 50%;
+            border-top: 2px solid #ccc;
+            width: 50%; height: 20px;
+        }
+        .tree li::after{
+            right: auto; left: 50%;
+            border-left: 2px solid #ccc;
+        }
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+        .tree li:only-child{ padding-top: 0;}
+        .tree li:first-child::before, .tree li:last-child::after{
+            border: 0 none;
+        }
+        .tree li:first-child::after{
+            border-radius: 5px 0 0 0;
+        }
+        .tree li:last-child::before{
+            border-right: 2px solid #ccc;
+            border-radius: 0 5px 0 0;
+        }
+        .tree ul ul::before{
+            content: '';
+            position: absolute; top: 0; left: 50%;
+            border-left: 2px solid #ccc;
+            width: 0; height: 20px;
+        }
+        .tree li a {
+            border: 2px solid #eee;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #fff;
+            background: var(--primary-navy);
+            font-size: 14px;
+            display: inline-block;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .tree li a span {
+            display: block;
+            font-size: 12px;
+            color: #ff9900;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+        .tree li a.orange { background: var(--accent-orange); color: #fff; border: 2px solid var(--accent-orange); }
+        .tree li a.orange span { color: var(--primary-navy); font-weight: bold; }
+        .tree li a.node-content { background: #28a745; color: #fff; border: 2px solid #28a745; }
+        .tree li a.node-content span { color: #d4edda; font-weight: bold; }
+        .tree li a.node-media { background: #17a2b8; color: #fff; border: 2px solid #17a2b8; }
+        .tree li a.node-media span { color: #d1ecf1; font-weight: bold; }
+        .tree li a.light { background: #fff; color: var(--primary-navy); border: 2px solid var(--accent-orange); }
+        .tree li a.light span { color: #666; }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>NHẬT TIẾN STEEL</h2>
+            <p>Marketing Proposal 2026</p>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#intro" class="nav-link active">0. Lời Mở Đầu</a></li>
+            <li><a href="#brief" class="nav-link">1. Client Brief</a></li>
+            <li><a href="#competitor" class="nav-link">2. Phân Tích Đối Thủ</a></li>
+            <li><a href="#insight" class="nav-link">3. Customer Insight</a></li>
+            <li><a href="#pillars" class="nav-link">4. Content Pillars</a></li>
+            <li><a href="#logo" class="nav-link">5. Logo Briefing</a></li>
+            <li><a href="#logodrafts" class="nav-link">6. Mẫu Ý Tưởng Logo</a></li>
+            <li><a href="#master" class="nav-link">7. Master Proposal</a></li>
+            <li><a href="#action" class="nav-link">8. Action Plan 3 Tháng</a></li>
+            <li><a href="#team" class="nav-link">9. Dự Kiến Nhân Sự Triển Khai</a></li>
+            <li><a href="#budget" class="nav-link">10. Ngân Sách Dự Kiến</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        
+        <!-- Section 0: Lời Mở Đầu -->
+        <div id="intro" class="section-container active">
+            <div class="intro-wrapper">
+                <h1 class="intro-title">Đề Xuất Marketing<br>Thép Nhật Tiến</h1>
+                <div class="intro-agency">Đơn vị thực hiện: Đất Cảng Agency</div>
+                <div class="intro-pic">Người phụ trách: <strong>Duy Linh</strong></div>
+            </div>
+        </div>
+
+        <!-- Section 1: Brief -->
+        <div id="brief" class="section-container">
+            <h1 class="section-title">1. Client Briefing Toàn Diện</h1>
+            <p>Hồ sơ thông tin thương hiệu chi tiết từ phía khách hàng (Nhật Tiến Steel) làm cơ sở hoạch định chiến lược.</p>
+            
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px;">I. Thông Tin Chung</h2>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="card" style="border-top: 3px solid var(--primary-navy);">
+                    <p style="margin-bottom: 8px;"><strong>Tên Doanh Nghiệp:</strong> Nhật Tiến Steel</p>
+                    <p style="margin-bottom: 8px;"><strong>Ngành Hàng:</strong> Phân phối Vật liệu xây dựng (Thép VAS...)</p>
+                    <p style="margin-bottom: 0;"><strong>Website:</strong> <a href="https://thepnhattien.vn/" target="_blank" style="color: var(--accent-orange);">thepnhattien.vn</a></p>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--primary-navy);">
+                    <p style="margin-bottom: 8px;"><strong>Người Đại Diện:</strong> Mr. Trọng</p>
+                    <p style="margin-bottom: 8px;"><strong>Chức Vụ:</strong> Đại diện Thương hiệu</p>
+                    <p style="margin-bottom: 0;"><strong>Điện Thoại:</strong> 0828.655.598</p>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">II. 5 Trụ Cột Chiến Dịch</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3 style="color: var(--accent-orange);">1. Mục tiêu (Objectives)</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Tạo Lead/Inbox:</strong> Tăng doanh số bán hàng trực tiếp.</li>
+                        <li style="margin-bottom: 10px;"><strong>Brand Awareness:</strong> Định vị thương hiệu cao cấp tại địa phương.</li>
+                        <li><strong>KPI:</strong> Mở rộng thương hiệu, giáo dục người dân sử dụng thép VAS.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--accent-orange);">2. Sản phẩm & USP</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Cốt lõi:</strong> NPP Cấp 1 các dòng thép VLXD, trọng tâm đẩy mạnh VAS.</li>
+                        <li style="margin-bottom: 10px;"><strong>Lợi thế (USP):</strong> Chứng chỉ xanh, nguồn hàng trực tiếp nhà máy Nam Cầu Kiền.</li>
+                        <li><strong>Bảo chứng:</strong> Cấp cho Cầu Hoàng Văn Thụ, Trung tâm Hành chính Hải Phòng...</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--accent-orange);">3. Chân dung Khách hàng</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Phân khúc:</strong> B2B (Nhà thầu lớn nhỏ) & B2C (Người dân xây nhà).</li>
+                        <li style="margin-bottom: 10px;"><strong>Khu vực:</strong> Hải Phòng, Quảng Ninh, Thái Bình, Hải Dương.</li>
+                        <li><strong>Mong muốn:</strong> Vật liệu uy tín, minh bạch, có CO/CQ rõ ràng.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--accent-orange);">4. Đối thủ cạnh tranh</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Top Đối thủ:</strong> Hòa Phát, Việt Đức, Việt Nhật.</li>
+                        <li><strong>Định vị khác biệt:</strong> Không đối đầu vĩ mô. Khẳng định NPP cấp 1 uy tín nhất khu vực gắn với công trình biểu tượng.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--accent-orange);">5. Ngân sách & Ràng buộc</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Thời gian:</strong> Triển khai từ tháng 6, hướng tới dài hạn.</li>
+                        <li style="margin-bottom: 10px;"><strong>Kênh ưu tiên:</strong> Facebook Fanpage.</li>
+                        <li><strong>Ràng buộc:</strong> Tập trung mạnh đẩy thương hiệu thép VAS tới tệp B2C.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">III. Yêu Cầu Sáng Tạo (Creative Direction)</h2>
+            <table>
+                <tr>
+                    <th width="30%">Hạng mục</th>
+                    <th>Chi tiết yêu cầu</th>
+                </tr>
+                <tr>
+                    <td><strong>Tone of Voice</strong></td>
+                    <td>Chuyên nghiệp, đáng tin cậy nhưng vẫn <strong>Chân thực, Đời thường</strong> (Phù hợp dân xây dựng).</td>
+                </tr>
+                <tr>
+                    <td><strong>Brand Colors</strong></td>
+                    <td><span style="color: var(--primary-navy); font-weight: bold; display: inline-flex; align-items: center;">Xanh Navy <span style="display:inline-block; width:16px; height:16px; background-color: var(--primary-navy); margin-left:5px; border-radius:3px; border:1px solid #ccc;"></span></span> và <span style="color: var(--accent-orange); font-weight: bold; display: inline-flex; align-items: center;">Cam <span style="display:inline-block; width:16px; height:16px; background-color: var(--accent-orange); margin-left:5px; border-radius:3px; border:1px solid #ccc;"></span></span> (Theo nhận diện logo mới).</td>
+                </tr>
+                <tr>
+                    <td><strong>Yêu cầu Logo</strong></td>
+                    <td>Sử dụng biểu tượng <strong>4 cột thép kết hợp hoa sen</strong>.</td>
+                </tr>
+                <tr>
+                    <td><strong>Brand Don'ts (Cấm kỵ)</strong></td>
+                    <td>Tuyệt đối không sử dụng hình ảnh công trình thi công kém chất lượng, lụp xụp, mất an toàn. Hình ảnh dự án cần 100% chuyên nghiệp.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 2: Phân Tích VAS -->
+        <div id="competitor" class="section-container">
+            <h1 class="section-title">2. Phân Tích Đối Thủ NPP Kênh Online</h1>
+            <p>Phân tích chi tiết về 3 đối thủ cạnh tranh chính trong lĩnh vực phân phối thép dựa trên sự hiện diện online (Website & Facebook) của họ.</p>
+            
+            <div class="card" style="margin-bottom: 20px; background-color: #fff3cd; border-left: 4px solid #ffc107;">
+                <h3 style="color: #856404; margin-top: 0;">🌟 INSIGHT CHUNG CỰC KỲ ĐẮT GIÁ CHO NHẬT TIẾN 🌟</h3>
+                <p>Ngành thép là ngành đặc thù B2B, nên cả 3 đối thủ bên dưới đều <strong>KHÔNG hề chú trọng vào kênh Facebook</strong>. Tần suất đăng bài cực kỳ kém, gần như "đem con bỏ chợ", không có người chăm sóc. Họ chỉ làm cho có, coi Facebook như một cái kho lưu trữ thông báo chứ không khai thác Marketing thực chiến.</p>
+                <p style="margin-bottom: 0;">👉 <strong>CƠ HỘI VÀNG:</strong> Việc thị trường bị bỏ ngỏ trên Social Media là cơ hội "nghìn năm có một" để Nhật Tiến nhảy vào khai thác, phủ sóng và gom Lead nhà thầu trên diện rộng thông qua Facebook.</p>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px;">Chi Tiết Từng Đối Thủ</h2>
+            <div class="card-grid" style="grid-template-columns: 1fr;">
+                
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">1. Công ty CP Thép Miền Bắc (NOSCO)</h3>
+                    <p><strong>Liên kết:</strong> <a href="https://thepmienbac.com.vn/" target="_blank" style="color: var(--accent-orange); text-decoration: none; font-weight: bold;">🌍 Website</a> | <a href="https://www.facebook.com/thepmienbacNOSCO" target="_blank" style="color: var(--accent-orange); text-decoration: none; font-weight: bold;">📘 Fanpage</a></p>
+                    <p><strong>Thông tin:</strong> Đại lý cấp 1 phân phối đa thương hiệu (Hòa Phát, VAS, Việt Úc...). Bán dàn trải nhiều hãng.</p>
+                    <p><strong>Đánh giá Online:</strong> Website làm tốt, nhưng Facebook cực kỳ Yếu. Tần suất đăng bài kém, gần như không có người chăm sóc. Không đầu tư nội dung thu hút khách hàng.</p>
+                    <p style="color: #d32f2f;"><strong>Cơ hội cho Nhật Tiến:</strong> Nhật Tiến có thể đánh mạnh vào ưu thế giá của mặt hàng ngách và chạy Facebook Ads chuyên sâu để vượt mặt họ về nhận diện với nhà thầu mới.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">2. Ống Thép Việt Hàn (Công ty CP VT & VTCN Việt Hàn)</h3>
+                    <p><strong>Liên kết:</strong> <a href="https://ongthepviethan.vn/" target="_blank" style="color: var(--accent-orange); text-decoration: none; font-weight: bold;">🌍 Website</a> | <a href="https://www.facebook.com/ongthepviethan/" target="_blank" style="color: var(--accent-orange); text-decoration: none; font-weight: bold;">📘 Fanpage</a></p>
+                    <p><strong>Thông tin:</strong> Chuyên sâu cực kỳ mạnh vào các loại Ống thép (ống đen, hộp mạ kẽm...).</p>
+                    <p><strong>Đánh giá Online:</strong> Website trực quan tối ưu chuyển đổi tốt. Tuy nhiên Facebook mang nặng tính truyền thống (trưng bày kho bãi), đăng bài kém, không chạy Lead.</p>
+                    <p style="color: #d32f2f;"><strong>Cơ hội cho Nhật Tiến:</strong> Né thế mạnh ống hộp của họ, tập trung đánh mạnh vào Thép Xây Dựng (Thép thanh vằn làm móng). Dùng Facebook Ads bám đuổi hớt tay trên tệp Chủ đầu tư.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">3. Công ty TNHH Ống Thép 190</h3>
+                    <p><strong>Liên kết:</strong> <a href="https://ongthep190.vn/" target="_blank" style="color: var(--accent-orange); text-decoration: none; font-weight: bold;">🌍 Website</a> | <a href="https://www.facebook.com/190steelpipes" target="_blank" style="color: var(--accent-orange); text-decoration: none; font-weight: bold;">📘 Fanpage</a></p>
+                    <p><strong>Thông tin:</strong> Là nhà sản xuất trực tiếp kiêm nhà cung ứng thép đen, xà gồ.</p>
+                    <p><strong>Đánh giá Online:</strong> Website phô diễn năng lực sản xuất tốt. Facebook cực kỳ khô khan, tần suất đăng kém, không có người chăm sóc thường xuyên.</p>
+                    <p style="color: #d32f2f;"><strong>Cơ hội cho Nhật Tiến:</strong> Đối thủ là nhà máy nên chính sách bán hàng cứng nhắc, quy trình xuất hàng phức tạp. Nhật Tiến sẽ thắng bằng Tốc độ giao hàng linh hoạt và dịch vụ cá nhân hóa qua MXH.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="insight" class="section-container">
+            <h1 class="section-title">4. Customer Insight & Nỗi Đau</h1>
+            <p>Bóc tách tâm lý khách hàng để đưa ra thông điệp "trúng đích", đánh đúng tử huyệt cảm xúc.</p>
+            
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px;">I. Chân Dung Khách Hàng</h2>
+            <div class="card-grid">
+                <div class="card" style="border-top: 3px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy);">1. Nhóm B2C (Gia Chủ / Ra quyết định)</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Độ tuổi:</strong> 35 - 55 tuổi (Thường cất nhà lần đầu/lần hai).</li>
+                        <li style="margin-bottom: 8px;"><strong>Tâm lý:</strong> Cực kỳ cẩn thận với kết cấu móng/cột. Không rành kỹ thuật, thường nghe thợ.</li>
+                        <li><strong>Hành vi:</strong> Hay chọn hãng theo "số đông", tra cứu cách nhận biết thật/giả.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy);">2. Nhóm B2B (Nhà Thầu / Thợ Xây)</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Độ tuổi:</strong> 30 - 50 tuổi.</li>
+                        <li style="margin-bottom: 8px;"><strong>Tâm lý:</strong> Rành kỹ thuật, chịu áp lực tiến độ. Uy tín gắn liền với độ bền công trình.</li>
+                        <li><strong>Hành vi:</strong> Đòi hỏi chiết khấu tốt, giao hỏa tốc (có xe cẩu) và giấy tờ CO/CQ.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">II. Nỗi Đau (Pain Points)</h2>
+            <div class="card-grid">
+                <div class="card" style="border-left: 4px solid #E74C3C; border-top: none;">
+                    <h3 style="color: #E74C3C;">Nỗi Đau B2C (Chủ nhà)</h3>
+                    <p style="margin-bottom: 10px;">• <strong>Sợ thép âm:</strong> Sợ bị đại lý/thầu "trộn" thép thiếu ly, thép non vào móng nhà.</p>
+                    <p>• <strong>Sợ rỉ sét:</strong> Sợ thép để ngoài trời lâu ngày trước khi đổ bê tông bị hư hại.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid #E74C3C; border-top: none;">
+                    <h3 style="color: #E74C3C;">Nỗi Đau B2B (Nhà thầu)</h3>
+                    <p style="margin-bottom: 10px;">• <strong>Sợ trễ tiến độ:</strong> Đại lý giao chậm làm 10 người thợ phải ngồi chơi xơi nước.</p>
+                    <p>• <strong>Sợ bão giá:</strong> Ký hợp đồng trọn gói xong giá thép vọt lên làm thầu chịu lỗ.</p>
+                </div>
+            </div>
+
+            <div class="card" style="background-color: var(--primary-navy); color: white; margin-top: 30px; text-align: center; border-top: none; padding: 40px 30px;">
+                <h3 style="color: var(--accent-orange); font-size: 22px; margin-top: 0; text-transform: uppercase;">💡 Sự Thật Ngầm Hiểu (Insight)</h3>
+                <p style="font-size: 18px; font-style: italic; line-height: 1.8; color: #E0E0E0; margin-bottom: 0;">"Thép Hòa Phát hay Việt Nhật nổi tiếng thật đấy, nhưng mua ở đại lý thì ai đảm bảo 100% chính hãng? Tôi không cần một thương hiệu vĩ mô quá xa xôi. Tôi cần một nhà phân phối uy tín <strong>ngay tại địa phương</strong>, có đủ giấy tờ đỏ chứng minh, và bảo chứng bằng chính những <strong>công trình lớn ngay tại quê hương tôi</strong>."</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Content Pillars -->
+        <div id="pillars" class="section-container">
+            <h1 class="section-title">4. Content Pillars Đề Bài 2 (Chi Tiết Triển Khai)</h1>
+            <p>3 Tuyến nội dung cốt lõi nhằm tối ưu hóa chuyển đổi ra Lead (SĐT), đập tan rào cản phòng thủ của thợ thầu bằng những nội dung thực chiến nhất.</p>
+            
+            <div class="card-grid" style="grid-template-columns: 1fr;">
+                
+                <div class="card" style="border-left: 4px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy); font-size: 20px;">1. PILLAR 1: BÁO GIÁ & CHÍNH SÁCH DÒNG TIỀN (BAIT / HOOK)</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                        <p style="margin: 0;"><strong>🎯 Vai trò cốt lõi:</strong> Mồi câu (Bait) thu hút trực tiếp những nhà thầu đang có nhu cầu thực tế và khát vốn.</p>
+                        <p style="margin: 0;"><strong>📊 Tỷ trọng & Định dạng:</strong> Chiếm 40% nội dung. Thể hiện qua Infographic Bảng Giá, Form Đăng Ký, Chatbot PDF.</p>
+                    </div>
+                    <h4 style="color: var(--accent-orange); margin-bottom: 5px;">🔥 Nội dung triển khai chi tiết:</h4>
+                    <ul style="padding-left: 20px; margin-top: 5px;">
+                        <li style="margin-bottom: 8px;"><strong>Cập nhật Bảng Giá:</strong> Cập nhật bảng giá thép định kỳ (Nhấn mạnh giá sát xưởng nhà máy).</li>
+                        <li style="margin-bottom: 8px;"><strong>Chính sách Chiết khấu:</strong> Các gói ưu đãi "Chiết khấu vỡ trần" cho các đơn hàng lớn (> 100 tấn).</li>
+                        <li style="margin-bottom: 0;"><strong>Gỡ rối Dòng tiền:</strong> Truyền thông "Đặc quyền công nợ" - Phân tích bài toán gối đầu vốn giúp nhà thầu không bị nghẽn dòng tiền thi công.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy); font-size: 20px;">2. PILLAR 2: NĂNG LỰC CẤP HÀNG & LOGISTICS (TRUST)</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                        <p style="margin: 0;"><strong>🎯 Vai trò cốt lõi:</strong> Xây dựng niềm tin (Trust) về một "Tổng kho" quy mô khổng lồ, xóa tan nỗi lo đứt gãy tiến độ.</p>
+                        <p style="margin: 0;"><strong>📊 Tỷ trọng & Định dạng:</strong> Chiếm 35% nội dung. Thể hiện qua Video ngắn (Reels/Shorts/TikTok), Hình ảnh thực tế.</p>
+                    </div>
+                    <h4 style="color: var(--accent-orange); margin-bottom: 5px;">🔥 Nội dung triển khai chi tiết:</h4>
+                    <ul style="padding-left: 20px; margin-top: 5px;">
+                        <li style="margin-bottom: 8px;"><strong>Video Thực chiến hiện trường:</strong> Cảnh đoàn xe siêu trường siêu trọng bốc xếp hàng xuyên màn đêm tại bãi Nhật Tiến.</li>
+                        <li style="margin-bottom: 8px;"><strong>Cam kết Tiến độ:</strong> Chạy thông điệp "Sáng gọi - Trưa có mặt - Chiều đổ móng". Kèm chính sách đền bù hợp đồng nếu giao chậm.</li>
+                        <li style="margin-bottom: 0;"><strong>Review Kho bãi:</strong> Livestream hoặc Video cận cảnh quy mô kho bãi chứa hàng ngàn tấn thép.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy); font-size: 20px;">3. PILLAR 3: EDUCATE SẢN PHẨM VAS (VALUE)</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                        <p style="margin: 0;"><strong>🎯 Vai trò cốt lõi:</strong> Phá băng thói quen dùng thép truyền thống. Nâng tầm VAS thành "Thép Xanh chuẩn Quốc gia".</p>
+                        <p style="margin: 0;"><strong>📊 Tỷ trọng & Định dạng:</strong> Chiếm 25% nội dung. Thể hiện qua Video chuyên gia, Bài viết phân tích sâu, Minigame.</p>
+                    </div>
+                    <h4 style="color: var(--accent-orange); margin-bottom: 5px;">🔥 Nội dung triển khai chi tiết:</h4>
+                    <ul style="padding-left: 20px; margin-top: 5px;">
+                        <li style="margin-bottom: 8px;"><strong>Giải Ngố Vật Liệu:</strong> Chuỗi Video thực tế cầm tận tay so sánh độ uốn, độ dẻo, khả năng chịu lực của VAS so với các loại thép khác.</li>
+                        <li style="margin-bottom: 8px;"><strong>Dùng Thử Trực Tiếp:</strong> Chương trình Minigame "Dùng Thử VAS": Tặng quà trải nghiệm/Mẫu thử cắt tại công trình (Geo-targeting KCN).</li>
+                        <li style="margin-bottom: 0;"><strong>Bảo chứng Dự án lớn:</strong> Phô diễn các công trình biểu tượng (Bà Nà Hills, Cao tốc Bắc Nam) đang sử dụng thép VAS làm Testimonial.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="logo" class="section-container">
+            <h1 class="section-title">6. Bản Định Hướng Thiết Kế Logo (Logo Brief)</h1>
+            <p>Phân tích đề bài và hướng tiếp cận thiết kế từ Đất Cảng Agency.</p>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px;">I. Tổng Quan & Yêu Cầu Từ Client</h2>
+            <div class="card-grid">
+                <div class="card" style="border-top: 3px solid var(--primary-navy);">
+                    <h3 style="color: var(--primary-navy);">1. Thông tin nền tảng</h3>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Tên thương hiệu:</strong> Nhật Tiến Steel</li>
+                        <li><strong>Ngành nghề:</strong> Phân phối thép xây dựng (VAS, Hòa Phát...)</li>
+                        <li><strong>Định vị cốt lõi:</strong> "Local King" tại Hải Phòng - Chuyên gia địa phương minh bạch, tốc độ và uy tín.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy);">2. "Đề bài" của Client</h3>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Cảm giác mang lại:</strong> Thể hiện sức mạnh công nghiệp nặng, cứng cáp, nam tính và an tâm tuyệt đối.</li>
+                        <li><strong>Giới hạn thiết kế:</strong> KHÔNG dùng mô-típ cũ như mái nhà, bánh răng cưa rập khuôn.</li>
+                        <li><strong>Yêu cầu đặc biệt:</strong> Client muốn có hình ảnh "Đóa hoa sen" nhưng tuyệt đối KHÔNG mềm mại, sến súa.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">II. Giải Pháp Từ Đất Cảng Agency</h2>
+            <div class="card-grid" style="grid-template-columns: 1fr;">
+                <div class="card" style="border-left: 5px solid var(--primary-navy);">
+                    <h3 style="color: var(--primary-navy);">1. Phân tích bài toán mâu thuẫn</h3>
+                    <p>"Hoa sen" vốn dĩ mang tính nữ, mềm mại và uyển chuyển. Ngược lại, "Ngành thép" đòi hỏi sự thô ráp, góc cạnh và vĩ mô.<br>👉 <strong>Nhiệm vụ đặt ra:</strong> Phải "Cơ khí hóa" (Mechanicalize) một hình tượng hữu cơ.</p>
+                </div>
+                <div class="card" style="border-left: 5px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy);">2. Concept Chủ Đạo: HOA SEN THÉP (The Mechanical Lotus)</h3>
+                    <p><strong>Ý tưởng cốt lõi:</strong> Sử dụng cấu trúc <strong>"Dầm thép chữ H / Cột thép xây dựng"</strong> kết hợp lại với nhau theo quy tắc đối xứng để tạo ảo giác quang học (Negative Space) hình đóa sen đang nở.</p>
+                    <p><strong>Tại sao chọn concept này?</strong> Cột thép đại diện cho tính cốt lõi của sản phẩm, móng nhà vững chắc. Hoa sen đại diện cho sự vươn lên. Sự kết hợp này mang lại 1 Logo vừa thỏa mãn sự cứng cáp B2B, vừa có chiều sâu ý nghĩa văn hóa.</p>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">III. Phân Tích Hình Khối & Màu Sắc</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">1. Hình Khối (Shape & Structure)</h3>
+                    <p><strong>Cấu trúc:</strong> 4 cột sắt/dầm thép thẳng đứng vươn lên.</p>
+                    <p><strong>Kỹ thuật:</strong> Khoảng trống (Negative Space) giữa các cột thép tình cờ tạo ra đường nét của một búp sen. Các cột được vát chéo góc ở đỉnh dứt khoát.</p>
+                    <p><strong>Thị giác:</strong> Cực kỳ tối giản, kiến trúc vĩ mô, nhìn xa giống như 4 tòa tháp chọc trời mọc lên từ một nền móng vững chắc.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">2. Màu Sắc (Brand Colors)</h3>
+                    <p><span style="display:inline-block; width:15px; height:15px; background:#1C355E; border-radius:3px; margin-right:5px; vertical-align:middle;"></span><strong>Xanh Navy:</strong> Màu chủ đạo. Thể hiện sự chuyên nghiệp, độ bền vững và uy tín (Trust).</p>
+                    <p><span style="display:inline-block; width:15px; height:15px; background:#F37021; border-radius:3px; margin-right:5px; vertical-align:middle;"></span><strong>Cam Sáng:</strong> Màu điểm xuyết. Tượng trưng cho lò nung luyện kim, sức sống và tốc độ giao hàng.</p>
+                </div>
+            </div>
+
+            <div class="card" style="background-color: #f8f9fa; margin-top: 30px; text-align: center; border: 1px dashed var(--primary-navy);">
+                <h3 style="color: var(--primary-navy); margin-top: 0;">🛠 Định Hướng Ứng Dụng Thực Tế</h3>
+                <p style="margin-bottom: 0;">Với nét thẳng và mảng khối đậm, logo dễ dàng được <strong>khắc laser/dập nổi</strong> lên thân thép. Màu Xanh/Cam bắt sáng tốt trên <strong>biển hiệu, bạt xe cẩu</strong>. Thêu nổi trên <strong>áo bảo hộ/nón bảo hộ</strong> cực kỳ sắc nét và ra "chất" dân kỹ thuật.</p>
+            </div>
+        </div>
+
+        <!-- Section 7: Mẫu Ý Tưởng Logo -->
+        <div id="logodrafts" class="section-container">
+            <h1 class="section-title">7. Mẫu Ý Tưởng Logo</h1>
+            
+            <div class="img-grid">
+                <div class="img-container slide-trigger" data-index="0">
+                    <img src="assets/Option 3.jpg" alt="Option 3">
+                    <p>Option 3: Logo Hoa Sen Lục Giác Khối (Light)</p>
+                </div>
+                <div class="img-container slide-trigger" data-index="1">
+                    <img src="assets/Option 3.1.jpg" alt="Option 3.1">
+                    <p>Option 3.1: Logo Hoa Sen Lục Giác Khối (Dark)</p>
+                </div>
+                <div class="img-container slide-trigger" data-index="2">
+                    <img src="assets/Option 1 chup ngang.jpg" alt="Option 1">
+                    <p>Option 1: Logo Hoa Sen Thép Mềm Mại</p>
+                </div>
+                <div class="img-container slide-trigger" data-index="3">
+                    <img src="assets/Option 2 hoan thien.jpg" alt="Option 2">
+                    <p>Option 2: Logo Hoa Sen Đa Tầng Hình Học</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 8: Master Proposal -->
+        <div id="master" class="section-container">
+            <h1 class="section-title">7. Master Proposal (Chiến Lược Thực Chiến)</h1>
+            <p>Bản phác thảo chiến lược tổng thể đập tan rào cản nhận diện. Lấy Performance Marketing (Chạy Ads ra số) làm mũi nhọn, kết hợp Branding VAS để thống lĩnh tệp khách hàng B2B, Chủ đầu tư và Nhà thầu Xây dựng.</p>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px;">I. Bối Cảnh & Lỗ Hổng Đối Thủ (Insights to Actions)</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">1. Lỗ hổng kênh Digital của Đối thủ</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li style="margin-bottom: 5px;"><strong>Nhận định:</strong> Cả 3 đối thủ có làm Facebook "cho có". Không chạy Ads thu Lead, nội dung khoe mẽ kho bãi khô khan. Khách hàng B2B không có tương tác trực tiếp với NPP trên mạng xã hội.</li>
+                        <li style="margin-bottom: 5px;"><strong>Mục tiêu:</strong> Chiếm thị phần tiếp cận (Reach) và Data khách hàng trên nền tảng số ngay khi đối thủ còn ngủ quên.</li>
+                        <li style="color: #d32f2f;"><strong>🔥 Hành động:</strong> 
+                            <br>- Tuần 1 chạy Ads phễu tương tác (Video kho bãi hoạt động tấp nập). 
+                            <br>- Tuần 2 trích xuất tệp người xem >15s (Custom Audience) để chạy bám đuổi (Remarketing) tặng báo giá.
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy);">2. Thói quen cục bộ của thị trường</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px;">
+                        <li style="margin-bottom: 5px;"><strong>Nhận định:</strong> Thị trường chuộng thép cũ (Tisco/Việt Úc). Thương hiệu VAS chưa khắc sâu vào tâm trí thợ thầu.</li>
+                        <li style="margin-bottom: 5px;"><strong>Mục tiêu:</strong> Educate thị trường, phá băng tâm lý e ngại vật liệu mới, định vị VAS là giải pháp cao cấp chuẩn quốc gia nhưng giá bình dân.</li>
+                        <li style="color: #d32f2f;"><strong>🔥 Hành động:</strong>
+                            <br>- Sản xuất chuỗi Video "Giải ngố Vật Liệu" so sánh chất lượng thép.
+                            <br>- Tung Minigame "Dùng thử VAS - Quà tặng tận công trình" nhắm vào tệp thợ thầu.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">II. Giải Quyết 3 Nỗi Đau Của Khách Hàng (Pain Points to Actions)</h2>
+            <div class="card-grid" style="grid-template-columns: 1fr;">
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">Nỗi đau 1: Giá cả mập mờ, cần báo giá sát xưởng</h3>
+                    <p><strong>🔥 Hành động thực tiễn:</strong> Xây dựng hệ thống <strong>Chatbot Báo Giá Tự Động</strong>. Chạy bài Ads dạng Bảng Biểu (Infographic) với Tiêu đề: "Báo giá thép tại xưởng - Chiết khấu vỡ trần cho đơn > 100 tấn".</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">Nỗi đau 2: Tiến độ đứt gãy & Thiếu năng lực cấp hàng</h3>
+                    <p><strong>🔥 Hành động thực tiễn:</strong> Quay Video thực tế cảnh đoàn xe tải siêu trường siêu trọng bốc dỡ hàng xuyên đêm. Gắn thông điệp bạo liệt: "Cần là có - Chở xuyên màn đêm - Cam kết đền bù hợp đồng nếu chậm tiến độ".</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">Nỗi đau 3: Dòng tiền & Công nợ gối đầu eo hẹp</h3>
+                    <p><strong>🔥 Hành động thực tiễn:</strong> Chạy chiến dịch thu Lead (Form) với mồi câu: "Đăng ký nhận đặc quyền Công Nợ Gối Đầu". Bắt buộc Telesales gọi chốt lịch hẹn trong 15 phút từ lúc khách để lại SĐT.</p>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">III. Chiến Lược Bao Vây Phễu Vệ Tinh (Funnel Architecture)</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">1. Mạng lưới Fanpage Vệ tinh Ẩn danh</h3>
+                    <p>Bỏ danh xưng Đại lý để tránh rào cản phòng thủ. Tạo 3 Page: <em>Tổng kho Thép Xây Dựng Miền Bắc</em>, <em>Thép Xây Dựng Giá Tốt</em>, <em>Nhà Máy Thép VAS Hải Phòng</em>. Đồng loạt A/B Testing 3 mồi câu.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">2. Quy về 1 mối Telesales (Pancake)</h3>
+                    <p>Tích hợp cả 3 page vào phần mềm Pancake. Khi khách inbox bất kỳ page nào, Telesales sẽ tiếp nhận xử lý tập trung với kịch bản chăm sóc chuyên nghiệp.</p>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">IV. Kế Hoạch Ngân Sách & Đo Lường (KPIs)</h2>
+            <table>
+                <tr>
+                    <th width="33%">Tỷ Trọng Ngân Sách</th>
+                    <th width="33%">Hành Động Cốt Lõi</th>
+                    <th width="33%">Đo Lường Trực Tiếp (KPIs)</th>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>50% Ngân sách:</strong> Performance Ads (Quảng cáo ra Tin nhắn/Lead).<br><br>
+                        <strong>25% Ngân sách:</strong> Branding Ads (Video Views phủ nhận diện VAS).<br><br>
+                        <strong>25% Ngân sách:</strong> Production & Quản trị Page.
+                    </td>
+                    <td>
+                        - Thiết lập chiến dịch Test mồi câu liên tục.<br>
+                        - Tập trung tệp Nam 30-55 tuổi khu công trường.<br>
+                        - Xoay vòng Content mới cho đến khi ra Lead rẻ thì vít ngân sách.
+                    </td>
+                    <td>
+                        - <strong>Cost Per Message:</strong> Dưới 50.000đ/tin nhắn.<br>
+                        - <strong>Cost Per Qualified Lead:</strong> Dưới 200.000đ/SĐT của nhà thầu.<br>
+                        - Tự động tắt quảng cáo đắt đỏ sau 3 ngày.
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="action" class="section-container">
+            <h1 class="section-title">8. Action Plan 3 Tháng (Chi tiết Triển khai)</h1>
+            <p>Lộ trình thực chiến từ lúc "Phá Băng" tâm lý thị trường đến lúc "Bùng Nổ" số lượng Lead B2B.</p>
+
+            <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-orange);">
+                <h3 style="color: var(--primary-navy); font-size: 20px;">🔥 THÁNG 1: "PHÁ BĂNG" & XÂY DỰNG MẠNG LƯỚI BẮT LEAD</h3>
+                <p><strong>Mục tiêu:</strong> Thiết lập hạ tầng kỹ thuật số hoàn chỉnh, khởi động chiến dịch mồi và thu thập data tệp khách hàng lõi.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                    <div>
+                        <h4 style="color: #d32f2f; margin-bottom: 5px;">Tuần 1-2: Setup Hạ Tầng Digital</h4>
+                        <ul style="padding-left: 20px; margin-top: 0;">
+                            <li>Khởi tạo và tối ưu 3 Fanpage vệ tinh ẩn danh.</li>
+                            <li>Kết nối toàn bộ 3 page vào phần mềm Pancake, thiết lập Chatbot tự động báo giá.</li>
+                            <li>Quay dựng Video thực tế tại kho bãi Nhật Tiến (xe siêu trường bốc xếp đêm).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #d32f2f; margin-bottom: 5px;">Tuần 3-4: Chạy Ads "Nhử mồi"</h4>
+                        <ul style="padding-left: 20px; margin-top: 0;">
+                            <li>Chạy Video Views phủ sóng bán kính 50km (Hải Phòng, Hải Dương, Nam Định, Thái Bình).</li>
+                            <li>Khởi động Performance Ads đợt 1 (Mồi câu: Bảng giá thép). A/B Testing Hình ảnh vs Video.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background-color: #fff3cd; padding: 10px; margin-top: 15px; border-radius: 5px;">
+                    <p style="margin: 0; color: #856404;"><strong>🎯 KPI Tháng 1:</strong> Đạt 100,000 Reach. Thu thập tệp Custom Audience (Xem video > 15s). CPL test duy trì dưới 100.000đ/tin nhắn.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-orange);">
+                <h3 style="color: var(--primary-navy); font-size: 20px;">🔥 THÁNG 2: "TĂNG TỐC" - VÍT NGÂN SÁCH RA SỐ</h3>
+                <p><strong>Mục tiêu:</strong> Dồn ngân sách vào các chiến dịch Performance Ads hiệu quả nhất. Đẩy mạnh thu Lead (SĐT) nhà thầu.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                    <div>
+                        <h4 style="color: #d32f2f; margin-bottom: 5px;">Tuần 1-2: Remarketing & Bám Đuổi</h4>
+                        <ul style="padding-left: 20px; margin-top: 0;">
+                            <li>Dùng tệp Data Tháng 1 chạy Quảng Cáo Bám Đuổi. Mồi câu: "Công nợ gối đầu linh hoạt".</li>
+                            <li>Telesales hoạt động hết công suất: "Gọi chốt hẹn trực tiếp trong 15 phút".</li>
+                            <li>Thiết kế Infographic Báo giá hàng tuần để chạy Ads.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #d32f2f; margin-bottom: 5px;">Tuần 3-4: Đánh chiếm thị trường cục bộ</h4>
+                        <ul style="padding-left: 20px; margin-top: 0;">
+                            <li>Cắm Geo-targeting Ads Minigame "Dùng thử VAS" tại Thái Bình, Nam Định, Hải Dương.</li>
+                            <li>Tắt các chiến dịch đắt đỏ. Dồn tiền (Scale up) vào chiến dịch ra Lead rẻ nhất.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background-color: #fff3cd; padding: 10px; margin-top: 15px; border-radius: 5px;">
+                    <p style="margin: 0; color: #856404;"><strong>🎯 KPI Tháng 2:</strong> Thu về ~ 100 Lead (SĐT nhà thầu tiềm năng). Tỉ lệ chuyển đổi ra SĐT kỳ vọng: 20%.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom: 25px; border-left: 4px solid var(--accent-orange);">
+                <h3 style="color: var(--primary-navy); font-size: 20px;">🔥 THÁNG 3: "BÙNG NỔ" - TỐI ƯU CPL & MỞ RỘNG</h3>
+                <p><strong>Mục tiêu:</strong> Đánh giá hiệu quả, lọc tệp khách hàng trung thành, và phủ sóng thương hiệu VAS tối đa.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+                    <div>
+                        <h4 style="color: #d32f2f; margin-bottom: 5px;">Tuần 1-2: Lọc Tệp & Tối Ưu Chuyển Đổi</h4>
+                        <ul style="padding-left: 20px; margin-top: 0;">
+                            <li>Phân tích tỷ lệ chuyển đổi từ Lead sang Hợp Đồng cùng team Sale Nhật Tiến.</li>
+                            <li>Dùng tệp "Khách đã ký Hợp Đồng" để chạy Lookalike Audience (Mở rộng tệp đối tượng tương tự).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #d32f2f; margin-bottom: 5px;">Tuần 3-4: Đẩy mạnh Branding VAS</h4>
+                        <ul style="padding-left: 20px; margin-top: 0;">
+                            <li>Phát hành series Video "Thép Xanh & Tiêu chuẩn Quốc Gia" (chiếm 25% ngân sách).</li>
+                            <li>Tổ chức "Ưu đãi chiết khấu kép" chốt Quý.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="background-color: #fff3cd; padding: 10px; margin-top: 15px; border-radius: 5px;">
+                    <p style="margin: 0; color: #856404;"><strong>🎯 KPI Tháng 3:</strong> Giảm Cost per Lead (CPL) xuống dưới 150.000đ/SĐT.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="team" class="section-container">
+            <h1 class="section-title">10. Dự Kiến Nhân Sự Triển Khai</h1>
+            <p>Đội ngũ chuyên gia thực chiến từ Đất Cảng Agency cam kết đồng hành cùng Nhật Tiến Steel trong suốt 3 tháng chiến dịch.</p>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px;">I. Sơ Đồ Tổ Chức Nhân Sự (Team Structure)</h2>
+            <div class="card" style="text-align: center; background-color: #f8f9fa; padding: 20px 0;">
+                <div class="tree">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">Project Manager <span>(01 nhân sự)</span></a>
+                            <ul>
+                                <li><a href="javascript:void(0);" class="node-content">Content Video <span>(01 nhân sự)</span></a></li>
+                                <li><a href="javascript:void(0);" class="node-content">Content Social/SEO <span>(01 nhân sự)</span></a></li>
+                                <li><a href="javascript:void(0);" class="node-media">Cameraman <span>(01 nhân sự)</span></a></li>
+                                <li><a href="javascript:void(0);" class="node-media">Video Editor <span>(01 nhân sự)</span></a></li>
+                                <li><a href="javascript:void(0);" class="node-media">Graphic Designer <span>(01 nhân sự)</span></a></li>
+                                <li><a href="javascript:void(0);" class="orange">Performance Ads <span>(01 nhân sự)</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">II. Chi Tiết Nhiệm Vụ Từng Chuyên Viên</h2>
+            <div class="card-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="card" style="border-top: 3px solid var(--primary-navy);">
+                    <h3 style="color: var(--primary-navy); margin-bottom: 5px;">1. Project Manager (Quản lý dự án)</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><em>Số lượng: 01 nhân sự</em></p>
+                    <ul style="padding-left: 20px;">
+                        <li>Chịu trách nhiệm tổng thể về tiến độ và chất lượng dự án.</li>
+                        <li>Đầu mối liên hệ trực tiếp, báo cáo hiệu quả định kỳ cho Nhật Tiến.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy); margin-bottom: 5px;">2. Content Team (Đội Sáng tạo Nội dung)</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><em>Số lượng: 02 nhân sự</em></p>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>01 Content Video:</strong> Lên kịch bản chi tiết cho chuỗi Video TikTok/Reels thực tế.</li>
+                        <li><strong>01 Content Social/SEO:</strong> Viết bài chăm sóc Fanpage và tối ưu bài viết chuẩn SEO Website.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy); margin-bottom: 5px;">3. Media Production Team (Đội Quay dựng & Thiết kế)</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><em>Số lượng: 03 nhân sự</em></p>
+                    <ul style="padding-left: 20px;">
+                        <li><strong>01 Cameraman:</strong> Khảo sát và quay phim thực tế tại kho bãi, công trình.</li>
+                        <li><strong>01 Video Editor:</strong> Cắt ghép, hậu kỳ, tạo hiệu ứng giật gân cho chuỗi Video.</li>
+                        <li><strong>01 Designer:</strong> Thiết kế ấn phẩm tĩnh, Thumbnail Video, hệ thống Biển bạt điểm bán offline.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 3px solid var(--primary-navy);">
+                    <h3 style="color: var(--primary-navy); margin-bottom: 5px;">4. Performance Ads Specialist</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><em>Số lượng: 01 nhân sự</em></p>
+                    <ul style="padding-left: 20px;">
+                        <li>Lên chiến dịch, tối ưu hóa ngân sách quảng cáo trên FB/TikTok.</li>
+                        <li>Đo lường chi phí trên mỗi Lead (CPL) và điều chỉnh target tệp khách thầu/thợ mỗi tuần.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--accent-orange); font-size: 18px;">Tổng lực lượng: 07 nhân sự chuyên trách hỗ trợ xuyên suốt dự án.</p>
+        </div>
+
+        <!-- Section 11: Budget -->
+        <div id="budget" class="section-container">
+            <h1 class="section-title">10. Ngân Sách Dự Kiến (Đề Bài 2)</h1>
+            <p>Dự toán ngân sách tập trung vào Tối ưu Chuyển đổi (Performance) và Sản xuất Video ngắn thực chiến. Bảng dưới đây không bao gồm phí Thiết kế Nhận diện (Setup 1 lần).</p>
+
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px;">I. Bảng Chi Phí Cố Định & Biến Đổi Theo Tháng</h2>
+            <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">1. Chi Phí Cố Định (Fixed Cost)</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Quản trị Fanpage Vệ Tinh (9.5tr):</strong> Quản trị 3 page ẩn danh, lên bài đều đặn, setup Chatbot báo giá 24/7.</li>
+                        <li><strong>Sản xuất Video Thực Chiến (12.5tr):</strong> Quay dựng tại kho bãi hiện trường, edit Video Ads/Reels.</li>
+                    </ul>
+                    <p style="font-size: 18px; color: #d32f2f; font-weight: bold; margin-top: 15px; text-align: center; border-top: 1px dashed #ccc; padding-top: 10px;">Tổng phí cố định: 22.000.000 VNĐ / tháng</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--primary-navy);">2. Chi Phí Biến Đổi (Ngân sách Ads)</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Ngân sách Ads An Toàn (10tr):</strong> Tập trung chạy túc tắc test tệp để gom Custom Audience.</li>
+                        <li><strong>Ngân sách Ads Bùng Nổ (20tr):</strong> Dồn tiền vít số mạnh khi đã tìm ra Content Win (Mồi câu ngon).</li>
+                    </ul>
+                    <p style="font-size: 18px; color: #d32f2f; font-weight: bold; margin-top: 15px; text-align: center; border-top: 1px dashed #ccc; padding-top: 10px;">Ads: 10.000.000 - 20.000.000 VNĐ / tháng</p>
+                </div>
+            </div>
+            
+            <h2 style="color: var(--secondary-navy); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 40px;">II. Tổng Mức Đầu Tư Tài Chính (Cố định + Ads 1 Tháng)</h2>
+            <div class="card-grid">
+                <div class="card" style="background-color: #f8fafc; border: 2px solid #cbd5e1;">
+                    <h3 style="color: var(--primary-navy); text-align: center;">Phương án Cơ Bản</h3>
+                    <p style="font-size: 26px; color: var(--accent-orange); font-weight: bold; text-align: center; margin: 10px 0;">32.000.000 VNĐ</p>
+                    <p style="text-align: center; color: #64748b;">(Gồm Phí duy trì 22tr + Ads cơ bản 10tr)</p>
+                </div>
+                <div class="card" style="background-color: #fff7ed; border: 2px solid var(--accent-orange);">
+                    <h3 style="color: var(--primary-navy); text-align: center;">Phương án Bùng Nổ</h3>
+                    <p style="font-size: 26px; color: #d32f2f; font-weight: bold; text-align: center; margin: 10px 0;">42.000.000 VNĐ</p>
+                    <p style="text-align: center; color: #64748b;">(Gồm Phí duy trì 22tr + Ads bùng nổ 20tr)</p>
+                </div>
+            </div>
+            <p style="font-style: italic; color: #666; font-size: 14px; text-align: right;">* Lưu ý: Không bao gồm phí mua công cụ, quà tặng minigame, ăn ở, đi lại liên tỉnh cho ekip quay.</p>
+
+        </div>
+
+        <div id="reference" class="section-container">
+            <h1 class="section-title">12. Tài Liệu Tham Khảo</h1>
+            <p>Báo cáo thị trường thép Việt Nam - Quý I năm 2025.</p>
+            <div style="width: 100%; height: 80vh; margin-top: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #ddd;">
+                <embed src="assets/BaoCao_Quy1_2025.pdf" type="application/pdf" width="100%" height="100%" />
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Lightbox Element -->
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-close" id="lb-close">&times;</div>
+        <div class="lightbox-nav lightbox-prev" id="lb-prev">&#10094;</div>
+        <img class="lightbox-img" id="lb-img" src="" alt="Slide Image">
+        <div class="lightbox-nav lightbox-next" id="lb-next">&#10095;</div>
+        <div class="lightbox-caption" id="lb-caption"></div>
+    </div>
+
+    <!-- Lightbox JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab Navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.section-container');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+
+                    sections.forEach(sec => {
+                        sec.classList.remove('active');
+                    });
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Lightbox functionality
+            const slideTriggers = document.querySelectorAll('.slide-trigger');
+            const lightbox = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lb-img');
+            const lbCaption = document.getElementById('lb-caption');
+            const btnClose = document.getElementById('lb-close');
+            const btnPrev = document.getElementById('lb-prev');
+            const btnNext = document.getElementById('lb-next');
+            
+            let currentIndex = 0;
+            const slidesData = [
+                { src: 'assets/Option 3.jpg', caption: 'Option 3: Logo Hoa Sen Lục Giác Khối (Light)' },
+                { src: 'assets/Option 3.1.jpg', caption: 'Option 3.1: Logo Hoa Sen Lục Giác Khối (Dark)' },
+                { src: 'assets/Option 1 chup ngang.jpg', caption: 'Option 1: Logo Hoa Sen Thép Mềm Mại' },
+                { src: 'assets/Option 2 hoan thien.jpg', caption: 'Option 2: Logo Hoa Sen Đa Tầng Hình Học' }
+            ];
+
+            function openLightbox(index) {
+                currentIndex = parseInt(index);
+                updateLightbox();
+                lightbox.classList.add('active');
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+            }
+
+            function updateLightbox() {
+                if (currentIndex < 0) currentIndex = slidesData.length - 1;
+                if (currentIndex >= slidesData.length) currentIndex = 0;
+                lbImg.src = slidesData[currentIndex].src;
+                lbCaption.textContent = slidesData[currentIndex].caption;
+            }
+
+            slideTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function() {
+                    openLightbox(this.getAttribute('data-index'));
+                });
+            });
+
+            btnClose.addEventListener('click', closeLightbox);
+            
+            btnPrev.addEventListener('click', function(e) {
+                e.stopPropagation();
+                currentIndex--;
+                updateLightbox();
+            });
+            
+            btnNext.addEventListener('click', function(e) {
+                e.stopPropagation();
+                currentIndex++;
+                updateLightbox();
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') { currentIndex--; updateLightbox(); }
+                if (e.key === 'ArrowRight') { currentIndex++; updateLightbox(); }
+            });
+            
+            // Click outside to close
+            lightbox.addEventListener('click', function(e) {
+                if(e.target === lightbox || e.target.classList.contains('lightbox-img') === false && !e.target.classList.contains('lightbox-nav')) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
